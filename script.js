@@ -66,11 +66,12 @@ const formsContainer = document.getElementById("forms-container");
 // Mostrar mensaje de bienvenida y luego formularios con efecto de desenfoque
 document.addEventListener("DOMContentLoaded", () => {
     welcomeText.style.display = "block";
+    formsContainer.style.display = "none"; // Ocultar el formulario inicialmente
     setTimeout(() => {
         welcomeText.classList.add("hidden");
         setTimeout(() => {
             welcomeText.style.display = "none";
-            formsContainer.classList.remove("hidden");
+            formsContainer.style.display = "flex"; // Mostrar el formulario después del desenfoque
         }, 1000); // Esperar a que termine la transición de desenfoque
     }, 3000);
 });

@@ -1,102 +1,124 @@
 body {
-    background-color: #000;
-    color: #fff;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  h1, h2, p {
-    color: #fff;
-    text-align: center;
-  }
-  
-  .container {
-    display: flex;
-    height: 100vh;
-  }
-  
-  /* Ajusta el ancho del panel lateral aquí */
-  .sidebar {
-    width: 140px; /* Cambia este valor para ajustar el ancho */
-    background-color: #111;
-    padding: 20px;
-  }
-  
-  .sidebar ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .sidebar ul li {
-    margin-bottom: 10px;
-  }
-  
-  .sidebar ul li a {
-    color: #00f;
-    text-decoration: none;
-    display: block;
-    padding: 10px;
-    border-radius: 4px;
-  }
-  
-  .sidebar ul li a:hover {
-    background-color: #0056b3;
-    color: #fff;
-  }
-  
-  .main-container {
-    flex-grow: 1;
-    padding: 20px;
-    background-color: #222;
-  }
-  
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .user-info {
-    display: flex;
-    align-items: center;
-  }
-  
-  .user-details {
-    margin-right: 20px;
-    color: #fff;
-  }
-  
-  .user-details h2 {
-    margin: 0;
-  }
-  
-  .user-details p {
-    margin: 5px 0 0;
-  }
-  
-  .user-photo {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-  }
-  
-  button, .link-button, .btn-primary {
-    cursor: pointer;
-    background-color: #00f;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 10px;
-  }
-  
-  button:hover, .link-button:hover, .btn-primary:hover {
-    background-color: #0056b3;
-    text-decoration: underline;
-  }
-  
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, p {
+  color: #fff;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.form-container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+input {
+  width: 95%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border: none;
+  border-bottom: 1px solid #00f;
+  background: transparent;
+  color: #fff;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #1a1a1a;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color:  #e0e0e01a;
+}
+
+/* Estilos para las opciones de registro, inicio, recuperación y demás */
+.link-button, .btn-primary {
+  cursor: pointer;
+  color: #00f;
+  text-decoration: none;
+}
+
+.link-button:hover, .btn-primary:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.google-register button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a1a1a;
+  color: #a9a4a4;
+  padding: 10px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.google-register button:hover {
+  background-color: #e0e0e01a;
+}
+
+.google-register button img {
+  width: 75px;
+  height: 40px;
+  margin-right: 8px;
+}
+
+.google-register button span {
+  margin-left: 8px;
+}
+
+.welcome {
+  font-size: 2.5em; /* Aumentar el tamaño de la fuente */
+  transition: opacity 1s ease, filter 1s ease; /* Transición para el desenfoque */
+}
+
+.welcome.hidden {
+  opacity: 0;
+  filter: blur(10px); /* Efecto de desenfoque */
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #f3f3f3;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.progress-bar-fill {
+  height: 10px;
+  width: 0;
+  background-color: #00f;
+  transition: width 0.5s ease-in-out;
+}

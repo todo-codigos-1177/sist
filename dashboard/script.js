@@ -4,7 +4,7 @@ import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/fi
 import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-firestore.js";
 
 // Firebase configuration
-const firebaseConfig = {
+const firebaseConfig = { 
     apiKey: "AIzaSyDHf5XLrcpem1bGS0dC6XoPqTiXpsp96Cs",
     authDomain: "avirtualsc-a35b9.firebaseapp.com",
     projectId: "avirtualsc-a35b9",
@@ -35,9 +35,9 @@ onAuthStateChanged(auth, async (user) => {
                 const userData = docSnap.data();
                 
                 // Display user data
-                userName.textContent = `${userData.nombre} ${userData.apellido}`;
-                userEmail.textContent = `Email: ${userData.email || 'No disponible'}`;
-                userPhoto.src = userData.foto || "placeholder.png";
+                userName.textContent = `${userData.nombre || ''} ${userData.apellido || ''}`.trim();
+                userEmail.textContent = userData.email ? `Email: ${userData.email}` : '';
+                userPhoto.src = userData.foto || "./perfil.png";
             } else {
                 console.log("No user data found");
             }

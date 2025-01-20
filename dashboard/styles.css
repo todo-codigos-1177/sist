@@ -52,12 +52,12 @@ button {
   background-color: #1a1a1a;
   color: #fff;
   border: none;
-  border-radius: 12px;
+  border-radius: 4px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color:  #e0e0e01a;
+  background-color: #000000;
 }
 
 /* Estilos para las opciones de registro, inicio, recuperación y demás */
@@ -77,20 +77,21 @@ button:hover {
   align-items: center;
   justify-content: center;
   background-color: #1a1a1a;
-  color: #a9a4a4;
+  color: #0056b3;
   padding: 10px;
   border: none;
-  border-radius: 12px;
+  border-radius: 4px;
   cursor: pointer;
 }
 
 .google-register button:hover {
-  background-color: #e0e0e01a;
+  background-color: #000000;
 }
 
 .google-register button img {
   width: 75px;
   height: 40px;
+  border-radius: 25px;
   margin-right: 8px;
 }
 

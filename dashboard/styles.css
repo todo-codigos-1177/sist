@@ -1,13 +1,13 @@
 body {
-  background-color: #f0f0f0;
-  color: #333;
+  background-color: #000; /* Fondo negro */
+  color: #ccc; /* Texto gris */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
 }
 
 h1, h2, p {
-  color: #333;
+  color: #ccc; /* Texto gris */
   text-align: left;
 }
 
@@ -17,13 +17,16 @@ h1, h2, p {
   align-items: flex-start;
   height: auto;
   flex-direction: row;
+  border-right: none; /* Eliminar la línea vertical existente */
 }
 
 .sidebar {
-  width: 200px;
-  background-color: #fff;
+  width: 150px; /* Hacer el panel lateral más angosto */
+  background-color: #000000;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-right: 2px solid #9fab81; /* Línea vertical verde suave */
+  height: 100vh; /* Ocupa el total de altura de la web */
 }
 
 .sidebar ul {
@@ -32,16 +35,16 @@ h1, h2, p {
 }
 
 .sidebar ul li {
-  margin-bottom: 10px;
+  margin-bottom: 25px;
 }
 
 .sidebar ul li a {
-  color: #9fab81; /* Cambiar a gris */
+  color: #ccc; /* Texto gris */
   text-decoration: none;
 }
 
 .sidebar ul li a:hover {
-  text-decoration: underline;
+  text-decoration: blink;
 }
 
 .main-container {
@@ -62,7 +65,7 @@ h1, h2, p {
 }
 
 .user-details {
-  margin-right: 10px;
+  margin-left: 10px; /* Ajustar el margen para que el texto no esté pegado a la foto */
 }
 
 .user-photo {
@@ -73,17 +76,17 @@ h1, h2, p {
 
 .header-separator {
   border: 0;
-  height: 1px;
-  background: #ccc;
+  height: 2px;
+  background: #9fab81; /* Línea verde suave */
   margin: 20px 0;
 }
 
 button {
   padding: 10px 20px;
-  background-color: #333333;
+  background-color: #676464;
   color: #fff;
   border: none;
-  border-radius: 4px;
+  border-radius: 12px;
   cursor: pointer;
 }
 
@@ -94,8 +97,8 @@ button:hover {
 #logout-btn {
   background-color: transparent;
   color: #333;
-  border: 2px solid #ff0000; /* Borde rojo */
-  border-radius: 4px;
+  border: 2px solid #ff0000b3; /* Borde rojo */
+  border-radius: 12px;
   cursor: pointer;
 }
 
